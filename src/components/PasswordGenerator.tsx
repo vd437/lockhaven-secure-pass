@@ -107,9 +107,9 @@ export const PasswordGenerator = () => {
           <Separator />
 
           {/* Character Options */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="uppercase">أحرف كبيرة (A-Z)</Label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="uppercase" className="text-sm font-medium">أحرف كبيرة (A-Z)</Label>
               <Switch
                 id="uppercase"
                 checked={options.includeUppercase}
@@ -117,8 +117,8 @@ export const PasswordGenerator = () => {
               />
             </div>
             
-            <div className="flex items-center justify-between">
-              <Label htmlFor="lowercase">أحرف صغيرة (a-z)</Label>
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="lowercase" className="text-sm font-medium">أحرف صغيرة (a-z)</Label>
               <Switch
                 id="lowercase"
                 checked={options.includeLowercase}
@@ -126,8 +126,8 @@ export const PasswordGenerator = () => {
               />
             </div>
             
-            <div className="flex items-center justify-between">
-              <Label htmlFor="numbers">أرقام (0-9)</Label>
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="numbers" className="text-sm font-medium">أرقام (0-9)</Label>
               <Switch
                 id="numbers"
                 checked={options.includeNumbers}
@@ -135,8 +135,8 @@ export const PasswordGenerator = () => {
               />
             </div>
             
-            <div className="flex items-center justify-between">
-              <Label htmlFor="symbols">رموز خاصة (!@#$)</Label>
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="symbols" className="text-sm font-medium">رموز خاصة (!@#$)</Label>
               <Switch
                 id="symbols"
                 checked={options.includeSymbols}
@@ -148,9 +148,9 @@ export const PasswordGenerator = () => {
           <Separator />
 
           {/* Advanced Options */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="similar">استبعاد الأحرف المتشابهة</Label>
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="similar" className="text-sm font-medium">استبعاد الأحرف المتشابهة</Label>
               <Switch
                 id="similar"
                 checked={options.excludeSimilar}
@@ -158,8 +158,8 @@ export const PasswordGenerator = () => {
               />
             </div>
             
-            <div className="flex items-center justify-between">
-              <Label htmlFor="ambiguous">استبعاد الأحرف الغامضة</Label>
+            <div className="flex items-center justify-between p-3 rounded-lg bg-card/30 border border-border/30">
+              <Label htmlFor="ambiguous" className="text-sm font-medium">استبعاد الأحرف الغامضة</Label>
               <Switch
                 id="ambiguous"
                 checked={options.excludeAmbiguous}

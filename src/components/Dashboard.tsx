@@ -65,7 +65,7 @@ export const Dashboard = () => {
       const date = new Date();
       date.setDate(date.getDate() - i);
       return {
-        date: date.toLocaleDateString('ar-SA', { weekday: 'short' }),
+        date: date.toLocaleDateString('ar', { weekday: 'short' }),
         fullDate: date.toDateString(),
         generated: 0,
         saved: 0,
@@ -101,7 +101,7 @@ export const Dashboard = () => {
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('ar-SA', {
+    return date.toLocaleDateString('ar', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',

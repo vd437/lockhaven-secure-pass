@@ -295,19 +295,19 @@ export const PasswordManager = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Search and Filter */}
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="البحث في كلمات المرور..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pr-10"
+                className="pr-10 h-11 text-base"
               />
             </div>
             
             <Select value={filterStrength} onValueChange={(value: any) => setFilterStrength(value)}>
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-full sm:w-48 h-11">
                 <SelectValue placeholder="تصفية حسب القوة" />
               </SelectTrigger>
               <SelectContent>
@@ -321,22 +321,22 @@ export const PasswordManager = () => {
           </div>
 
           {/* Statistics */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="text-center p-3 rounded-lg bg-card/50">
-              <div className="text-2xl font-bold text-primary">{passwords.length}</div>
-              <div className="text-sm text-muted-foreground">إجمالي كلمات المرور</div>
+              <div className="text-xl sm:text-2xl font-bold text-primary">{passwords.length}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">إجمالي كلمات المرور</div>
             </div>
             <div className="text-center p-3 rounded-lg bg-card/50">
-              <div className="text-2xl font-bold text-green-400">{strengthCounts.strong}</div>
-              <div className="text-sm text-muted-foreground">كلمات مرور قوية</div>
+              <div className="text-xl sm:text-2xl font-bold text-green-400">{strengthCounts.strong}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">كلمات مرور قوية</div>
             </div>
             <div className="text-center p-3 rounded-lg bg-card/50">
-              <div className="text-2xl font-bold text-red-400">{strengthCounts.weak}</div>
-              <div className="text-sm text-muted-foreground">كلمات مرور ضعيفة</div>
+              <div className="text-xl sm:text-2xl font-bold text-red-400">{strengthCounts.weak}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">كلمات مرور ضعيفة</div>
             </div>
             <div className="text-center p-3 rounded-lg bg-card/50">
-              <div className="text-2xl font-bold text-blue-400">{filteredPasswords.length}</div>
-              <div className="text-sm text-muted-foreground">نتائج البحث</div>
+              <div className="text-xl sm:text-2xl font-bold text-blue-400">{filteredPasswords.length}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">نتائج البحث</div>
             </div>
           </div>
         </CardContent>
